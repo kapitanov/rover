@@ -1,0 +1,14 @@
+<VisualMicro>
+  <Program Name="rcrover" Ext=".ino" Location="C:\Users\Альберт\Documents\Arduino\rcrover">
+    <Compile CompilerErrors="0" ConfigurationName="Debug" OptimiseLibs="True" OptimiseCore="True" BuildPath="C:\Users\Альберт\AppData\Local\VMicro\Arduino\Builds\rcrover\mega2560" StopOnError="True" IncludeDebug="0" IncludesDebug="0" SketchName="rcrover" IsCompiled="1" />
+    <Platform Name="Arduino">
+      <Board Name="mega2560" Description="Arduino Mega 2560 or Mega ADK" CoreFolder="C:\dev\tools\arduino\hardware\arduino\cores\arduino" VariantFullPath="C:\dev\tools\arduino\hardware\arduino\variants\mega" />
+    </Platform>
+    <VCCodeModel>
+      <VCCodeMacros>
+        <VCCodeMacro Name="ARDUINO" Value="101" />
+        <VCCodeMacro Name="__AVR_ATmega2560__" />
+      </VCCodeMacros>
+    </VCCodeModel>
+  </Program>
+</VisualMicro>
