@@ -95,6 +95,24 @@
     <ClInclude Include="rover_telemetry_UartChannel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="rover_chassic_LightEmitter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rover_commanding_LightCommandInterpreter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rover_Util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rover_commanding_SystemCommandInterpreter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rover_chassic_LifeformDetector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rover_telemetry_LifeformTelemetryMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Visual Micro\.rcrover.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -161,6 +179,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="rover_telemetry_UartChannel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rover_chassic_LightEmitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rover_commanding_LightCommandInterpreter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rover_Util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rover_commanding_SystemCommandInterpreter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rover_chassic_LifeformDetector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rover_telemetry_LifeformTelemetryMessage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

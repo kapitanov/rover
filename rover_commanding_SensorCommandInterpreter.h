@@ -10,12 +10,15 @@ namespace rover
 		class SensorCommandInterpreter : public CommandInterpreter
 		{
 		public:
-			SensorCommandInterpreter(rover::chassic::RangingSensor& rangingSensor);
+			SensorCommandInterpreter(
+				rover::chassic::RangingSensor& rangingSensor,
+				rover::chassic::LifeformDetector& lifeformDetector);
 
 			virtual bool handle(const Command& command);
 
 		private:
 			rover::chassic::RangingSensor& _rangingSensor;
+			rover::chassic::LifeformDetector& _lifeformDetector;
 		};
 	}
 }

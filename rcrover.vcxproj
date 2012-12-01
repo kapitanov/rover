@@ -71,6 +71,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="rover_chassic_LifeformDetector.h" />
+    <ClInclude Include="rover_chassic_LightEmitter.h" />
+    <ClInclude Include="rover_commanding_LightCommandInterpreter.h" />
+    <ClInclude Include="rover_commanding_SystemCommandInterpreter.h" />
     <ClInclude Include="rover_logic_CollisionPrevention.h" />
     <ClInclude Include="rover_logic.h" />
     <ClInclude Include="rover_chassic.h" />
@@ -92,15 +96,21 @@
     <ClInclude Include="rover_telemetry_CmdReplyTelemetryMessage.h" />
     <ClInclude Include="rover_commanding_CommandReader.h" />
     <ClInclude Include="rover_telemetry_DistanceTelemetryMessage.h" />
+    <ClInclude Include="rover_telemetry_LifeformTelemetryMessage.h" />
     <ClInclude Include="rover_telemetry_Logger.h" />
     <ClInclude Include="rover_telemetry_LogSeverity.h" />
     <ClInclude Include="rover_telemetry_LogTelemetryMessage.h" />
     <ClInclude Include="rover_telemetry_UartChannel.h" />
     <ClInclude Include="rover_telemetry_TelemetryMessage.h" />
+    <ClInclude Include="rover_Util.h" />
     <ClInclude Include="servo.h" />
     <ClInclude Include="Visual Micro\.rcrover.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="rover_chassic_LifeformDetector.cpp" />
+    <ClCompile Include="rover_chassic_LightEmitter.cpp" />
+    <ClCompile Include="rover_commanding_LightCommandInterpreter.cpp" />
+    <ClCompile Include="rover_commanding_SystemCommandInterpreter.cpp" />
     <ClCompile Include="rover_logic_CollisionPrevention.cpp" />
     <ClCompile Include="rover_chassic_CameraMount.cpp" />
     <ClCompile Include="rover_chassic_MobilePlatform.cpp" />
@@ -117,10 +127,12 @@
     <ClCompile Include="rover_telemetry_CmdReplyTelemetryMessage.cpp" />
     <ClCompile Include="rover_commanding_CommandReader.cpp" />
     <ClCompile Include="rover_telemetry_DistanceTelemetryMessage.cpp" />
+    <ClCompile Include="rover_telemetry_LifeformTelemetryMessage.cpp" />
     <ClCompile Include="rover_telemetry_Logger.cpp" />
     <ClCompile Include="rover_telemetry_LogTelemetryMessage.cpp" />
     <ClCompile Include="rover_telemetry_UartChannel.cpp" />
     <ClCompile Include="rover_telemetry_TelemetryMessage.cpp" />
+    <ClCompile Include="rover_Util.cpp" />
     <ClCompile Include="servo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

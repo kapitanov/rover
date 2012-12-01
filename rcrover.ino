@@ -1,6 +1,5 @@
 #pragma region INCLUDES&usings
 
-#include "rover_commanding_LightCommandInterpreter.h"
 #include "rover_chassic_LightEmitter.h"
 #include "rover_chassic.h"
 #include "rover_telemetry.h"
@@ -27,6 +26,7 @@ chassic::MobilePlatform platform(chassic::MobilePlatformConfig(6, 7, 8, 9));
 chassic::CameraMount cameraMount(2, 3);
 chassic::RangingSensor rangingSensor(4, 5);
 chassic::LightEmitter frontLight(22);
+chassic::LifeformDetector lifeformDetector(10);
 
 #pragma endregion
 
@@ -38,14 +38,15 @@ logic::CollisionPrevention collisionPrevention(platform, rangingSensor);
 
 #pragma region COMMANDING
 
-commanding::CommandInterpreter* commandInterpreters[] = { NULL, NULL, NULL, NULL };
+commanding::CommandInterpreter* commandInterpreters[] = { NULL, NULL, NULL, NULL, NULL };
 commanding::CompositeCommandInterpreter commandInterpreter(commandInterpreters, sizeof(commandInterpreters));
 commanding::CommandReader commandReader(Serial, commandInterpreter);
 
 commanding::ChassicCommandInterpreter chassicCmdInterpreter(platform);
 commanding::CameraMountCommandInterpreter cameraMountCmdInterpreter(cameraMount);
-commanding::SensorCommandInterpreter sensorCmdInterpreter(rangingSensor);
+commanding::SensorCommandInterpreter sensorCmdInterpreter(rangingSensor, lifeformDetector);
 commanding::LightCommandInterpreter lightCmdInterpreter(frontLight);
+commanding::SystemCommandInterpreter systemCmdInterpreter;
 
 #pragma endregion
 
@@ -66,11 +67,15 @@ void setup()
 	telemetry::Logger::info("setting up ranging sensor");
 	rangingSensor.initialize();
 
+	telemetry::Logger::info("setting up lifeform detector");
+	lifeformDetector.initialize();
+
 	telemetry::Logger::info("setting up command interpreters");
 	commandInterpreters[0] = &chassicCmdInterpreter;
 	commandInterpreters[1] = &cameraMountCmdInterpreter;
 	commandInterpreters[2] = &sensorCmdInterpreter;
 	commandInterpreters[3] = &lightCmdInterpreter;
+	commandInterpreters[4] = &systemCmdInterpreter;
 	
 	telemetry::Logger::info("setting up internal logic");
 	collisionPrevention.enable();
